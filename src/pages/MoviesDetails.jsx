@@ -28,6 +28,17 @@ export default class HomePage extends Component {
         this.setState({ error });
       });
   }
+
+  //go back button
+
+  constructor(props) {
+    super(props);
+    this.goBack = this.goBack.bind(this);
+  }
+  goBack() {
+    this.props.history.goBack();
+  }
+
   render() {
     const {
       id,
@@ -46,6 +57,9 @@ export default class HomePage extends Component {
     const imgpath = `https://image.tmdb.org/t/p/w342/${poster_path}`;
     return (
       <div>
+        <button className={styles.backBtn} type="button" onClick={this.goBack}>
+          go back
+        </button>
         <section className={styles.About}>
           {!!poster_path && (
             <img className={styles.Img} src={imgpath} alt={title} />

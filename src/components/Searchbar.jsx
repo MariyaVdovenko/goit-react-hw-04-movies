@@ -21,11 +21,7 @@ export default class Searchbar extends Component {
 
   render() {
     return (
-      <form
-        className={styles.Form}
-        onSubmit={this.handleSubmit}
-        className="SearchForm"
-      >
+      <form className={styles.Form} onSubmit={this.handleSubmit}>
         <input
           className={styles.SearchFormInput}
           type="text"

@@ -1,6 +1,7 @@
 .About {
   display: flex;
   flex-direction: row;
+  margin-left: 15px;
 }
 
 .Img {
@@ -19,7 +20,12 @@
 
 .addInfoSection {
   margin-top: 20px;
+  margin-left: 15px;
   padding-bottom: 20px;
   border-bottom: 2px solid #9c9c9c;
   border-top: 2px solid #9c9c9c;
+}
+
+.backBtn {
+  margin: 0 0 15px 15px;
 }

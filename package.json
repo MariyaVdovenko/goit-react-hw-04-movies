@@ -1,5 +1,5 @@
 {
-  "name": "goit-react-hw-03-image-finder",
+  "name": "goit-react-hw-04-movies",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,7 +20,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://MariyaVdovenko.github.io/goit-react-hw-03-image-finder",
+  "homepage": "https://MariyaVdovenko.github.io/goit-react-hw-04-movies",
   "eslintConfig": {
     "extends": "react-app"
   },
