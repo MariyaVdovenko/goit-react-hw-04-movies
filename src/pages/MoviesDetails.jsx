@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import * as movieApi from '../services/movie-api';
 import { Route, Switch, Link } from 'react-router-dom';
-import MoviesCredits from './MovieCredits';
-import MoviesReviews from './MovieReviews';
+import MoviesCredits from '../components/MovieCredits';
+import MoviesReviews from '../components/MovieReviews';
 import styles from './MoviesDetails.module.css';
 
 export default class HomePage extends Component {
@@ -54,7 +54,6 @@ export default class HomePage extends Component {
       releaseYear = release_date.substring(0, 4);
     }
 
-    const imgpath = `https://image.tmdb.org/t/p/w342/${poster_path}`;
     return (
       <div>
         <button className={styles.backBtn} type="button" onClick={this.goBack}>
@@ -62,10 +61,13 @@ export default class HomePage extends Component {
         </button>
         <section className={styles.About}>
           {!!poster_path && (
-            <img className={styles.Img} src={imgpath} alt={title} />
+            <img
+              className={styles.Img}
+              src={movieApi.posterimgpath + poster_path}
+              alt={title}
+            />
           )}
           <section>
-            {' '}
             <h1>
               {title} ({releaseYear})
             </h1>

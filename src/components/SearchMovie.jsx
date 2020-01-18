@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Searchbar from '../components/Searchbar';
+import Searchbar from './Searchbar';
 import * as movieApi from '../services/movie-api';
 import { Link } from 'react-router-dom';
 

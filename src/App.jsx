@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch, Redirect, Link } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import MoviesDetails from './pages/MoviesDetails';
 import styles from './App.module.css';
-import SearchMovie from './pages/SearchMovie';
+import SearchMovie from './components/SearchMovie';
 import routes from './services/routes';
 
 export default class App extends Component {
@@ -13,19 +13,19 @@ export default class App extends Component {
         <div className={styles.App}>
           <ul className={styles.AppHeader}>
             <li>
-              <Link className={styles.NavLink} to="/">
+              <Link className={styles.NavLink} to={routes.HOME}>
                 Home
               </Link>
             </li>
             <li>
-              <Link className={styles.NavLink} to="/movies">
+              <Link className={styles.NavLink} to={routes.MOVIES}>
                 Movie
               </Link>
             </li>
           </ul>
           <Switch>
             <Route exact path={routes.HOME} component={HomePage} />
-            <Route path="/movies/:movieId" component={MoviesDetails} />
+            <Route path={routes.MOVIESDETAILS} component={MoviesDetails} />
             <Route path={routes.MOVIES} component={SearchMovie} />
 
             <Redirect to="/" />

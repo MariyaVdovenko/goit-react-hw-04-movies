@@ -30,3 +30,5 @@ export const getMovieReviews = id => {
     .then(res => res.json())
     .then(data => data.results);
 };
+export const imgpath = 'https://image.tmdb.org/t/p/w185';
+export const posterimgpath = `https://image.tmdb.org/t/p/w342/`;
